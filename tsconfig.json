@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5", // В какую спецификацию компилируем: для поддержки большинства браузеров
+    "jsx": "react-jsx",
+    "allowJs": true, // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
+    "moduleResolution": "node",
+    "baseUrl": ".", // для абсолютного импорта
+    "paths": {
+      "*": ["./src/*"]
+    },
+    "esModuleInterop": true, // для использования import/export, вместо require
+    "allowSyntheticDefaultImports": true // для прописывания импортов в стандартном стиле
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": [
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
+}

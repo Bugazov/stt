@@ -1,0 +1,15 @@
+.primary {
+  color: black;
+  font-size: 18px;
+}
+.primary:hover {
+  color: var(--red);
+}
+
+.secondary {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+.secondary:hover {
+  color: var(--red);
+}
