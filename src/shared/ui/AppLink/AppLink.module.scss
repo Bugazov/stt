@@ -1,5 +1,5 @@
 .primary {
-  color: black;
+  color: var(--primary-applink);
   font-size: 18px;
 }
 .primary:hover {
@@ -7,7 +7,7 @@
 }
 
 .secondary {
-  color: rgb(255, 255, 255);
+  color: var(--secondary-applink);
   font-size: 18px;
 }
 .secondary:hover {

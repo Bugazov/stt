@@ -12,7 +12,10 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div data-testid="header" className={classNames(styles.bg_color, {}, [, styles[theme]])}>
+    <div
+      data-testid="header"
+      className={classNames(styles.bg_color, {}, [, styles[theme]])}
+    >
       <div className="container">
         <div className={styles.nav}>
           <div className={styles.logo}>
@@ -23,75 +26,36 @@ const Header = () => {
           <div className={styles.nav_list}>
             <ul>
               <li>
-                <AppLink
-                  theme={
-                    theme === "light"
-                      ? AppLinkTheme.PRIMARY
-                      : AppLinkTheme.SECONDARY
-                  }
-                  to="/shop"
-                >
+                <AppLink theme={AppLinkTheme.PRIMARY} to="/shop">
                   Магазин
                 </AppLink>
               </li>
               <li>
                 <AppLink
-                data-testid = "header_link"
-                  theme={
-                    theme === "light"
-                      ? AppLinkTheme.PRIMARY
-                      : AppLinkTheme.SECONDARY
-                  }
+                  data-testid="header_link"
+                  theme={AppLinkTheme.PRIMARY}
                   to="/about"
                 >
                   Услуги
                 </AppLink>
               </li>
               <li>
-                <AppLink
-                  theme={
-                    theme === "light"
-                      ? AppLinkTheme.PRIMARY
-                      : AppLinkTheme.SECONDARY
-                  }
-                  to="delivery"
-                >
+                <AppLink theme={AppLinkTheme.PRIMARY} to="delivery">
                   Доставка
                 </AppLink>
               </li>
               <li>
-                <AppLink
-                  theme={
-                    theme === "light"
-                      ? AppLinkTheme.PRIMARY
-                      : AppLinkTheme.SECONDARY
-                  }
-                  to="partnership"
-                >
+                <AppLink theme={AppLinkTheme.PRIMARY} to="partnership">
                   Сотрудничество
                 </AppLink>
               </li>
               <li>
-                <AppLink
-                  theme={
-                    theme === "light"
-                      ? AppLinkTheme.PRIMARY
-                      : AppLinkTheme.SECONDARY
-                  }
-                  to="news"
-                >
+                <AppLink theme={AppLinkTheme.PRIMARY} to="news">
                   Новости
                 </AppLink>
               </li>
               <li>
-                <AppLink
-                  theme={
-                    theme === "light"
-                      ? AppLinkTheme.PRIMARY
-                      : AppLinkTheme.SECONDARY
-                  }
-                  to="contacts"
-                >
+                <AppLink theme={AppLinkTheme.PRIMARY} to="contacts">
                   Контакты
                 </AppLink>
               </li>

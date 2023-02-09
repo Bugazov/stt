@@ -95,7 +95,7 @@
 }
 
 h1{
-  color:#142833;
+  color:var(--primary);
 }
 
 .first-four{
@@ -107,15 +107,15 @@ h1{
 .second-four{
   position: relative;
   right:18vmin;
-  z-index: -1;
+  
   font-size:40vmin;
+  color: var(--primary);
 }
 
 .wrong-para{
-  font-family: "Montserrat", sans-serif;
   position: absolute;
   bottom:15vmin;
   padding:3vmin 12vmin 3vmin 3vmin;
   font-weight:600;
-  color:#092532;
+  color:var(--primary);
 }
