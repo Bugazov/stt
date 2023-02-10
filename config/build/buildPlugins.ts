@@ -25,8 +25,9 @@ export function buildPlugins({
   
   ];
 
-  isDev && plugins.push(new ReactRefreshWebpackPlugin())
-  isDev && plugins.push(new webpack.HotModuleReplacementPlugin())
+ if(isDev){ plugins.push(new ReactRefreshWebpackPlugin())
+  plugins.push(new webpack.HotModuleReplacementPlugin())
+ }
 
   return plugins
 }
