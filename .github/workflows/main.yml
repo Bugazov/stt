@@ -1,15 +1,15 @@
-name: testing, build
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: push:
-      branches:[main]
-      pull_request:
-      branches:[main]
+name:  testing, building
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
-pipeline:
-  runs-on:ubuntu-latest
-  strategy:
-  matix:
-  node-version:[17.x]
+  pipeline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 17.x ]
 
     steps:
       - uses: actions/checkout@v2
@@ -27,5 +27,3 @@ pipeline:
         run: npm run storybook:build
       - name: screenshot testing
         run: npm run test:ui:ci
-       
-  
